@@ -1,0 +1,8 @@
+Flask==3.0.0
+selenium==4.15.0
+undetected-chromedriver==3.5.4
+webdriver-manager==4.0.1
+flask-cors==4.0.0
+setuptools
+python-dotenv
+cryptography==41.0.7
