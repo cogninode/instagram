@@ -8,29 +8,6 @@ class AccountManager:
         self.current_account = None
         self.tasks_with_current = 0
     
-    # def get_account_for_task(self):
-    #     """Get an available account, implementing rotation strategy"""
-        
-    #     # Check if current account needs rotation
-    #     if self.current_account and self.tasks_with_current >= Config.MAX_TASKS_PER_ACCOUNT:
-    #         print(f"Rotating account: {self.current_account['username']} completed {self.tasks_with_current} tasks")
-    #         self.db.set_account_cooldown(
-    #             self.current_account['id'], 
-    #             Config.ACCOUNT_COOLDOWN_TIME
-    #         )
-    #         self.current_account = None
-    #         self.tasks_with_current = 0
-        
-    #     # Get available account
-    #     if not self.current_account:
-    #         self.current_account = self.db.get_available_account()
-    #         if not self.current_account:
-    #             raise Exception("No available accounts. All accounts are in cooldown or inactive.")
-    #         self.tasks_with_current = 0
-    #         print(f"Selected account: {self.current_account['username']}")
-        
-    #     return self.current_account
-    
     def get_account_for_task(self):
         """Get an available account, implementing rotation strategy"""
         # Check if current account needs rotation
